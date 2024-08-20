@@ -1,0 +1,29 @@
+@model Ogrenci 
+
+@{
+    ViewData["Title"] = "Create Page"
+}
+
+<h2>Ogrenci Ekle</h2>
+
+<hr>
+<form asp-controller = "Ogrenci" asp-action = "Create" method="post">
+    <div class="mb-3">
+        <label asp-for = "OgrenciAd" class="form-label">Ogrenci Adi</label>
+        <input asp-for="OgrenciAd" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="OgrenciSoyad" class="form-label">Ogrenci Soyad</label>
+        <input asp-for="OgrenciSoyad" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="OgrenciEmail" class="form-label">Ogrenci Email</label>
+        <input asp-for="OgrenciEmail" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="OgrenciTelefon" class="form-label">Ogrenci Telefon</label>
+        <input asp-for="OgrenciTelefon" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+</form>

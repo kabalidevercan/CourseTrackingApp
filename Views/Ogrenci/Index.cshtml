@@ -1,0 +1,36 @@
+@model IEnumerable<Ogrenci>
+
+@{
+    @ViewData["Title"] = "Ogrenciler"
+}
+
+
+<h2>Ogrenci Listesi</h2>
+<hr> 
+
+<a asp-controller="Ogrenci" asp-action="Create" class="btn btn-primary">Ogrenci Ekle</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 150px;">@Html.DisplayNameFor(m=> m.OgrenciId)</th>
+            <th>@Html.DisplayNameFor(m=> m.OgrenciAd)</th>
+            <th>@Html.DisplayNameFor(m=> m.OgrenciSoyad)</th>
+            <th style="width: 150px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var ogrenci in Model) {
+            <tr>
+                <th>Deneme</th>
+                <td>@Html.DisplayFor(modelItem =>  ogrenci.OgrenciId)</td>
+                <td>@Html.DisplayFor(modelItem => ogrenci.OgrenciAd)</td>
+                <td>@Html.DisplayFor(modelItem => ogrenci.OgrenciSoyad)</td>
+                <td>
+                    <a href="" class="btn btn-sm btn-primary">Details</a>
+                    <a href="" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ 
